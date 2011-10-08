@@ -549,7 +549,7 @@ div.post h2,
 div.page h3,
 div.post h3 {
 	margin-bottom: 8px;
-	margin-top: 10px;
+	margin-top: 20px;
 	font: 27px/1.4em 'Arvo', "Lucida Grande", Lucida, Verdana, sans-serif;
 	color: #327097;
 	border-bottom: 1px solid black;
@@ -560,7 +560,7 @@ div.post h2 a{
 }
 div.page h3,
 div.post h3 {
-	margin:5px 0 4px 0;
+	margin: 20px 0 4px 0;
 	font: 18px/1.1em 'Arvo', "Lucida Grande", Lucida, Verdana, sans-serif;
 	border:none;
 }

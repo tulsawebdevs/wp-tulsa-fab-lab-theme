@@ -1,0 +1,5 @@
+<?php if (have_posts()) : ?>
+<?php while (have_posts()) : the_post();
+	get_template_part( 'type-'.get_post_type(), 'excerpt' );		
+	endwhile; ?>
+<?php endif; ?>

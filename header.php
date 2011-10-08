@@ -13,6 +13,8 @@
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href='http://fonts.googleapis.com/css?family=Orbitron:regular,bold|Crimson+Text:regular,400italic,600,600italic,700,700italic|Arvo:regular,italic,bold,bolditalic|Droid+Sans:regular,bold|Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
 <?php wp_head(); ?>
 
 </head>

@@ -32,7 +32,7 @@ function theme_init(){
 	
 	// main theme js functionality file
 	wp_register_script( 'theme_func',
-	get_bloginfo('template_directory') . '/js/theme.js',
+	get_bloginfo('template_directory') . '/js/theme_.js',
 	array( 'jquery' ), '0.3'); //, 'typekit' , 'jquery.fancybox', 'tipsy' 
 	
 	if(!is_admin()){
@@ -79,7 +79,7 @@ add_filter( 'excerpt_length', 'theme_excerpt_length' );
 
 // Make a nice read more link on excerpts
 function theme_excerpt_more( $more ) {
-	return '&hellip;&nbsp;<a href="'. get_permalink() . '">' . __('Continue&nbsp;reading&nbsp;<span class="meta-nav">&rarr;</span>', 'pat_themes') . '</a>';
+	return '&hellip;&nbsp;<a href="'. get_permalink() . '">' . __('Read&nbsp;More&nbsp;<span class="meta-nav">&raquo;</span>', 'pat_themes') . '</a>';
 }
 
 add_filter( 'excerpt_more', 'theme_excerpt_more' );
@@ -146,3 +146,23 @@ function delete_comment_link($id) {
     echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'">'.__('Spam', 'theme').'</a>';
   }
 }
+
+/* 
+Title: Change login graphic
+Author: Travis Quinnelly
+Note: This just makes the login screen more awesome!
+*/
+function tq_login_screen() {
+echo '
+<style type="text/css">
+	html { background-color: #38627D; }
+	body { border:0; }
+	h1 a { background: url(/wp-content/themes/fablab/img/logo.png) no-repeat 50%; height:180px; width:300px; }
+	input.button-primary { background:none; border-color:inherit; color:#666666; }
+	input.button-primary:hover { color:black; }
+	#login { margin-top:130px; }
+	.login #nav a, .login #nav a:hover {color:white !important; text-decoration:none;border-bottom:1px solid #CCC;}
+	#backtoblog { }
+</style>';
+}
+add_action('login_head','tq_login_screen');
